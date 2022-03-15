@@ -1,21 +1,21 @@
 #include <stdio.h>
-#include "main.h"
 
 /**
- * main - Prints natural numbers below 1024 that are
- * multiplies of 3 or 5
+ * main - Entry point
  *
- * Return: Always 0.
+ * Return: Always 0 (Success)
  */
-int print_natural_number(int n)
-{
-	int a, b;
 
-	for (a = 1; a < 1024; a++)
+int main(void)
+{
+	int i, sum = 0;
+
+	for (i = 0; i < 1024; i++)
 	{
-		if ((a % 3) == 0 || (a % 5) == 0)
-			b += a;
+		if ((i % 5) == 0 || (i % 3) == 0)
+			sum += i;
 	}
-	printf("%d\n", b);
+	printf("%d\n", sum);
+
 	return (0);
 }
