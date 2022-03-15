@@ -1,14 +1,14 @@
-#include "holberton.h"
+#include <stdio.h>
+#include "main.h"
 
 /**
- * _islower - Shows 1 if the input is a
- * lowercase character. Another cases, shows
- * 0
+ * _islower - checks for lowercase character
  *
- * @c: The character in ASCII code
+ * @c : the character in ASCII code
  *
- * Return: 1 for lowercase character. 0 for the rest.
+ * Return: 1 if lowercase and 0 if not lowercase
  */
+
 int _islower(int c)
 {
 	if (c >= 97 && c <= 122)
@@ -19,5 +19,4 @@ int _islower(int c)
 	{
 		return (0);
 	}
-	_putchar('\n');
 }
