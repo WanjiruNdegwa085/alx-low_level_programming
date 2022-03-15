@@ -7,7 +7,7 @@
  *
  * Return: Always 0.
  */
-int print_natural_number(void)
+int print_natural_number(int n)
 {
 	int a, b;
 
