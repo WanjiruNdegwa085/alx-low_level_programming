@@ -6,17 +6,19 @@
   *
   * Return: Nothing.
   */
+
 void print_chessboard(char (*a)[8])
 {
-	int b, c;
+	unsigned int i, m = 0;
 
-	for (b = 0; b < 8; b++)
+	for (i = 0; i < 64; i++)
 	{
-		for (c = 0; c < 8; c++)
+		if (i % 8 == 0 && i != 0)
 		{
-			_putchar(a[b][c]);
+			m = i;
+			_putchar('\n');
 		}
-
-		_putchar('\n');
+		_putchar(a[i / 8][i - m]);
 	}
+	_putchar('\n');
 }
