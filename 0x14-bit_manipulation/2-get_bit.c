@@ -1,18 +1,11 @@
 #include "holberton.h"
-
 /**
- * get_bit - value of a bit at a given index
- * @n: decimal parameter
- * @index: index
- * Return: val
+ * get_bit - function that returns the value of a bit at a given index
+ * @n: input long integer
+ * @index: index to start at
+ * Return: value of the bit at the index
  */
 int get_bit(unsigned long int n, unsigned int index)
 {
-
-	int bit;
-
-	bit = (n >> index);
-	if (index > 32)
-	return (-1);
-	return (bit & 1);
+	return ((index > (8 * sizeof(n) - 1)) ? -1 : (int)(n >> index) & 1);
 }
